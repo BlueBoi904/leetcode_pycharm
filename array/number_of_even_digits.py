@@ -55,4 +55,8 @@ def find_numbers( nums: list[int]) -> int:
 
     return count
 
+def find_nums(nums: list[int]):
+    return len([x for x in nums if len(str(x)) % 2 == 0])
+
 print(find_numbers([12,345,2,6,7896]))
+print(find_nums([12,345,2,6,7896]))
