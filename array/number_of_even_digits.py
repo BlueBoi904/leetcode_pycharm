@@ -45,5 +45,14 @@ Acceptance Rate
 """
 
 
-def findNumbers(self, nums: list[int]) -> int:
-    pass
+def find_numbers( nums: list[int]) -> int:
+    count = 0
+
+    for idx, num in enumerate(nums):
+        digits = len([digit for digit in str(num)])
+        if digits % 2 == 0:
+            count += 1
+
+    return count
+
+print(find_numbers([12,345,2,6,7896]))
